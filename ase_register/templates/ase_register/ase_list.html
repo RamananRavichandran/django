@@ -1,0 +1,30 @@
+{% extends "ase_register/base.html" %}
+{% block content %}
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Full Name</td>
+            <td>Employee Id</td>
+            <td>Date Of Join</td>
+            <td>Mobile Number</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ase in ase_list %}
+            <tr>
+                <td>{{ase.fullname}}</td>
+                <td>{{ase.emp_code}}</td>
+                <td>{{ase.dateoj}}</td>
+                <td>{{ase.mobile}}</td>
+                <td>
+                    <a href="" class="btn text-secondary px-0">
+                        <i class="far fa-edit fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
