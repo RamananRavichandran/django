@@ -24,12 +24,12 @@
                 <td>{{ase.mobile}}</td>
                 <td>
                     <a href="{% url 'ase_update' ase.id %}" class="btn text-secondary px-0">
-                        <i class="far fa-edit fa-lg"></i>
+                        <i class="fas fa-edit fa-lg"></i>update
                     </a>
                     <form action="{% url 'ase_delete' ase.id %}" method="post" class="d-inline">
                         {% csrf_token %}
                         <button type="submit" class="btn">
-                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                            <i class="fas fa-trash-alt text-danger float-right"></i>delete
                         </button>
                     </form>
 
